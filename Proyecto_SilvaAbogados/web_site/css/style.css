@@ -1,0 +1,650 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    /*background-color: #19264b;*/
+    margin: auto;
+}
+
+
+/* GLOBALES */
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #19264b;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: #19264b;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    color: #19264b;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    color: #19264b;
+}
+
+a {
+    text-decoration: none;
+    color: #19264b;
+}
+
+p {
+    color: #19264b;
+    text-align: justify;
+}
+
+ol {
+    color: #19264b;
+}
+
+ul {
+    list-style: none;
+    color: #19264b;
+    text-align: justify;
+}
+
+/* Slyder Principal */
+
+
+/* Carrucel */
+
+div#Slider {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+div#Slider div.Slider {
+    display: -webkit-flex;
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    margin-left: -100%;
+}
+
+div.Slider img {
+    display: block;
+}
+
+
+/* Controles */
+
+div#Controles span {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    opacity: 0.5;
+    cursor: pointer;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    margin: 0px 5px;
+}
+
+div#Controles span:hover {
+    opacity: 0.8;
+}
+
+div#Controles span img {
+    background: #fff;
+    width: 30px;
+}
+
+div#Controles span.NextSlider {
+    right: 0;
+}
+
+
+/* Diseño Responsivo */
+
+@media only screen and (max-width: 800px) {
+    div#Slider {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    div#Slider {
+        width: 100%;
+        height: 175px;
+    }
+    div#Controles span {
+        top: 40%;
+    }
+    div#Controles span img {
+        width: 20px;
+    }
+}
+
+
+/* LOGO ENCABEZADO */
+
+.encabezado_inicio {
+    display: flex;
+    background-color: #ffffff;
+    height: 75px;
+}
+
+.encabezado_inicio img {
+    height: 75px;
+    padding: 0px;
+}
+
+
+/* REDES SOCIALES ENCABEZADO */
+
+.redesSociales {
+    padding-top: 25px;
+    margin-left: 60%;
+}
+
+.redesSociales>a {
+    display: contents;
+    color: #b3742e;
+    font-size: 25px;
+}
+
+.redesSociales>a:hover {
+    display: contents;
+    color: #19264b;
+    font-size: 25px;
+}
+
+.redesSociales>a>i {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+/* LOGIN */
+.login{
+    margin-left: auto;
+    border-left: solid 2px #b3742e;
+    padding: 2%;
+    background-color: #eaeaea;
+}
+
+.login>a{
+    width: 15%;
+    margin-left: 10px;
+    padding-top: 5%;
+    color: #b3742e;
+    font-size:120%;
+}
+
+.login>a:hover{
+    width: 15%;
+    margin-left: 10px;
+    padding-top: 5%;
+    color: #19264b;
+    font-size: 120%;
+}
+
+
+/* MENU NAVEGACION */
+
+nav {
+    background-color: #b3742e;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    display: inline-block;
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration: none;
+    color: #19264b;
+}
+
+nav a:hover {
+    background-color: #eaeaea;
+    color: #19264b;
+    transition: .4s;
+}
+
+.contenedorKali {
+    height: 125px;
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+/* OPCIONES DESPLEGABLES CONTRATOS */
+
+nav a,
+.dropbtn {
+    display: inline-block;
+    justify-content: space-around;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav a:hover,
+.dropbtn:hover {
+    background-color: #eaeaea;
+    color: #19264b;
+    transition: .4s;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #b3742e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #eaeaea;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #eaeaea;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* CONTRATOS */
+
+.contenedorInfo {
+    height: 175px;
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+.tablaOpciones {
+    height: 410px;
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+.tablaOpciones>table {
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.tablaOpciones>table>caption {
+    padding-bottom: 20px;
+    font-size: 250%;
+}
+
+.tablaOpciones>table>thead>tr>th {
+    border: solid 2px #b3742e;
+}
+
+.tablaOpciones>table>thead>tr>th,
+.tablaOpciones>table>tbody>tr>th {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #19264b;
+    color: #b3742e;
+}
+
+.tablaOpciones>table>tbody>tr>td {
+    border: solid 2px #19264b;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.seccionContratos {
+    display: flex;
+    justify-content: space-between;
+    height: 410px;
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+.opcionContrato {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    background-color: #eaeaea;
+    text-align: center;
+    border: solid 2px #19264b;
+    padding-top: 8%;
+    margin-top: 5%;
+}
+
+.opcionContrato a {
+    margin: 0px;
+    padding: 0px;
+    color: #19264b;
+    width: 100%;
+}
+
+.opcionContrato:hover{
+    background-color: #19264b;
+    border: solid 2px #b3742e;;
+    border-radius: 50%;
+    transition: .5s;
+    color: #b3742e;
+}
+
+.opcionContrato > a:hover{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    color: #b3742e;
+}
+
+/* CONTRATOS INDIVIDUALES */
+
+.contenedorContrato {
+    display: flex;
+    justify-content: space-between;
+    height: 700px;
+    border-top: solid 5px #b3742e;
+    background-color: #eaeaea;
+    padding-top: 2%;
+    
+}
+
+.contInfoIndividual{
+    height: 100px;
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+aside {
+    /*background-color: #b3742e;*/
+}
+
+.contenedorAside {
+    border: 2px solid #19264b;
+    background-image: url(img/Hoja_Membretada_Silva_Abogados.jpg);
+    width: 450px;
+    height: 600px;
+    margin-right: 10px;
+}
+
+section {
+    color: #19264b;
+    padding-top: .5%;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+.formContrato>input {
+    margin-bottom: 15px;
+}
+
+.formContrato>input,
+.formContrato>label {
+    display: block;
+    width: 100%;
+}
+
+/* BLOG */
+
+.contenedorBlog{
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: #eaeaea;
+}
+
+.contenedorBlog > section{
+    border-bottom: solid 2px #b3742e;
+    border-left: solid 2px #b3742e;
+    margin-top: 25px;
+}
+
+/* TERMINOS Y CONDICIONES */
+
+.contenedorTerminosCondiciones {
+    display: block;
+    justify-content: center;
+    border-top: solid 5px #19264b;
+    border-bottom: solid 5px #19264b;
+    border-left: solid 5px #19264b;
+    background-color: #eaeaea;
+    width: 80%;
+    height: 425px;
+    overflow-y: scroll;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contenedorTerminosCondiciones>p {
+    padding-left: 30px;
+    padding-right: 25px;
+}
+
+
+/* AVISO DE PRIVACIDAD */
+
+.contenedorAvisPrivacidad {
+    display: block;
+    justify-content: center;
+    border-top: solid 5px #19264b;
+    border-bottom: solid 5px #19264b;
+    border-left: solid 5px #19264b;
+    background-color: #eaeaea;
+    width: 80%;
+    height: 425px;
+    overflow-y: scroll;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contenedorAvisPrivacidad>p {
+    padding-left: 30px;
+    padding-right: 25px;
+}
+
+.contenedorAvisPrivacidad li {
+    padding-left: 40px;
+    padding-right: 35px;
+}
+
+
+/* POLIZA */
+
+.contenedorPoliza {
+    height: 525px;
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+.contenedorPoliza2 {
+    height: 280px;
+    text-align: justify;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+.tablaPrecios {
+    height: 415px;
+    text-align: center;
+    border-top: solid 5px #b3742e;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eaeaea;
+}
+
+.tablaPrecios>table {
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.tablaPrecios>table>caption {
+    padding-bottom: 20px;
+    font-size: 250%;
+}
+
+.tablaPrecios>table>thead>tr>th {
+    border: solid 2px #19264b;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #19264b;
+    color: #b3742e;
+}
+
+.tablaPrecios>table>tbody>tr>td {
+    border: solid 2px #19264b;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 415px;
+    background-color: #eaeaea;
+    margin-top: 20px;
+    text-align: center;
+    border-top: solid 5px #b3742e;
+    text-align: center;
+}
+
+.contenedorFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedorDatos {
+    margin: 0;
+    padding: 5px;
+}
+
+.contenedorDatos>p {
+    text-align: center;
+}
+
+.mapaUbicacion {
+    background-color: #eaeaea;
+    border: solid 2px #19264b;
+}
+
+.avisoTerminos {
+    font-size: 200%;
+    padding-top: 10%;
+    padding-right: 0;
+    margin-right: 20px;
+    margin-left: 5%;
+}
+
+.contenedorFooter a {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.contenedorFooter a:hover {
+    color: #b3742e;
+    text-decoration: underline #19264b;
+}
+
+.avisoTerminos>a {
+    display: block;
+    justify-content: center;
+    margin-bottom: auto;
+}
+
+.contenedorMuestraBlog {
+    width: 35%;
+    margin: 0;
+    padding: 5px;
+}
+
+.contenedorMuestraBlog>ul>li {
+    padding: 5px;
+    border-bottom: 2px solid #b3742e;
+}

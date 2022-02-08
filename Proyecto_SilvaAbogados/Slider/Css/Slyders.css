@@ -1,0 +1,75 @@
+/* Slyder Principal */
+
+/* Carrucel */
+
+div#Slider{
+	width: 800px;
+	height: 450px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+
+div#Slider div.Slider{
+	display: -webkit-flex;
+	position: absolute;
+	width: max-content;
+	height: 100%;
+	margin-left: -100%;
+}
+
+div.Slider img{
+	display: block;
+}
+
+/* Controles */
+div#Controles span{
+	position: absolute;
+	z-index: 1;
+	top: 40%;
+	opacity: 0.5;
+	cursor: pointer;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	margin: 0px 5px;
+}
+
+div#Controles span:hover{
+	opacity: 0.8;
+}
+
+div#Controles span img{
+	background: #fff;
+	width: 30px;
+}
+
+div#Controles span.NextSlider{
+	right: 0;
+}
+
+/* Diseño Responsivo */
+
+@media only screen and (max-width: 800px) {
+	div#Slider{
+		width: 500px;
+		height: 300px;
+	}
+
+}
+
+@media only screen and (max-width: 400px) {
+	div#Slider{
+		width: 100%;
+		height: 175px;
+	}
+
+	div#Controles span{
+		top: 40%;
+	}
+
+	div#Controles span img{
+		width: 20px;
+	}
+}
